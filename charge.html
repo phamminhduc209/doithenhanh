@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content=""/>
-    <title>Index - doithenhanh</title>
+    <title>Charge</title>
 
     <!-- css -->
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
@@ -80,82 +80,66 @@
                 <!-- /mdland-navigator -->
             </div>
         </div>
-        <div class="main-slider">
-            <div class="owl-carousel dotsData" data-nav="true" data-margin="0" data-items='1' data-autoplayTimeout="700" data-autoplay="false" data-loop="true">
-                <div class="item-slide" data-dot="1">
-                    <img src="img/slider03-compressed.jpg" alt="slide1">
+        <div class="container content clearfix">
+            <div class="form-group content-margin"><h4>Đổi thẻ cào thành tiền mặt</h4></div>
+            <div class="row">
+                <div class="form-horizontal col-sm-8 content-margin">
+                    <form action="" method="">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Loại thẻ:</label>
+                            <div class="col-sm-8">
+                                <div data-toggle="buttons" class="btn-group">
+                                    <label class="btn btn-default active" style="width:25%">
+                                        <input type="radio" value="vtt" title="Viettel" name="provider">
+                                        <img src="img/vtt.png" style="width:100%">
+                                    </label>
+                                    <label class="btn btn-default" style="width:25%">
+                                        <input type="radio" value="vms" title="Mobifone" name="provider">
+                                        <img src="img/vms.png" style="width:100%">
+                                    </label>
+                                    <label class="btn btn-default" style="width:25%">
+                                        <input type="radio" value="vnp" title="Vinaphone" name="provider">
+                                        <img src="img/vnp.png" style="width:100%">
+                                    </label>
+                                    <label class="btn btn-default" style="width:25%">
+                                        <input type="radio" value="gate" title="Gate" name="provider">
+                                        <img src="img/gate.png" style="width:100%">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Thông tin phí:</label>
+                            <div class="control-label col-sm-8">
+                                <span class="text-left pull-left">
+                                    Viettel: <strong>36%</strong>, 
+                                    Mobifone: <strong></strong>36%</strong>, 
+                                    Vinaphone: <strong>36%</strong>, 
+                                    Gate: <strong>36%</strong>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Mã pin:</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="pin" name="pin" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Mã serial:</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="serial" name="serial" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-8">
+                                <button id="buyCardButton" type="submit" class="btn login-button">
+                                    <i class="fa fa-arrow-right"></i> Nạp thẻ
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="item-slide" data-dot="2">
-                    <img src="img/slider04-compressed.jpg" alt="slide1">
-                </div>
-            </div>
-        </div>
-        <div class="news clearfix">
-            <div class="col-md-8">
-                <div class="title-news-sale"><a href="javascript:void(0);">Chiết khấu đổi thẻ:</a></div>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Nhà mạng</th>
-                            <th class="text-right">Phí giao dịch</th>
-                            <th class="text-right">Trạng thái</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Viettel</td>
-                            <td class="text-right ng-binding">36%</td>
-                            <td class="text-right"><span class="title-active">Hoạt động.</span></td>
-                        </tr>
-                        <tr>
-                            <td>Mobifone</td>
-                            <td class="text-right ng-binding">36%</td>
-                            <td class="text-right"><span class="title-active">Hoạt động.</span></td>
-                        </tr>
-                        <tr>
-                            <td>Vinaphone</td>
-                            <td class="text-right ng-binding">36%</td>
-                            <td class="text-right"><span class="title-active">Hoạt động.</span></td>
-                        </tr>
-                        <tr>
-                            <td>Gate</td>
-                            <td class="text-right ng-binding">36%</td>
-                            <td class="text-right"><span class="title-active">Hoạt động.</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-4 hidden-xs">
-                <div class="title-news-sale"><a href="javascript:void(0);">Tin tức - Khuyến mại <i class="fa fa-angle-right"></i></a></div>
-                <ul class="list-unstyled">
-                    <li>
-                        <a class="info-news clearfix" href="javascript:void(0);">
-                            <div class="info-news-left">
-                                <p class="day"><span>02</span></p>
-                                <p class="month"><span>th.06</span></p>
-                            </div>
-                            <div class="info-news-right"><span>[03/06/2016] Mobifone khuyến mại 50% giá trị thẻ nạp</span></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="info-news clearfix" href="javascript:void(0);">
-                            <div class="info-news-left">
-                                <p class="day"><span>09</span></p>
-                                <p class="month"><span>th.05</span></p>
-                            </div>
-                            <div class="info-news-right"><span>[15/5-15/6] TRẢI NGHIỆM DỊCH VỤ - NHẬN NGAY ƯU ĐÃI 100K</span></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="info-news clearfix" href="javascript:void(0);">
-                            <div class="info-news-left">
-                                <p class="day"><span>06</span></p>
-                                <p class="month"><span>th.05</span></p>
-                            </div>
-                            <div class="info-news-right"><span>QUY ĐỊNH PHÍ THAM GIA CHƯƠNG TRÌNH TRẢ GÓP 0%</span></div>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
         <div class="payment clearfix hidden-xs">
@@ -234,38 +218,6 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="sellModal" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header no-padding">
-                    <div class="table-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="white">×</span></button>
-                        <i class="fa fa-exclamation-triangle text-warning" aria-hidden="true"></i> Cài đặt bảo mật:
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                Bạn hãy thiết lập mật khẩu cấp 2 để sử dụng cho các giao dịch thanh toán!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <div class="col-sm-12 text-right">
-                                <button type="submit" class="btn btn-sm btn-primary" ng-click="setPassword2()"><i class="fa fa-check" aria-hidden="true"></i> Đồng ý
-                                </button>
-                                <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Hủy
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     
     <!-- js components -->
     <script src="js/jquery.min.js"></script>

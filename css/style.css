@@ -6542,7 +6542,7 @@ ul.cardList .boxWrap {
     background: #090;
     border-radius: 5px 0 0;
     bottom: -1px;
-    content: "âœ“";
+    content: "✓";
     font-size: 12px;
     padding: 3px;
     position: absolute;
@@ -6615,4 +6615,28 @@ tr.no-border td {
     margin: 0 0 0 15px;
     padding: 5px 0 0 45px;
     position: relative
+}
+
+
+.main-slider .owl-prev,
+.main-slider .owl-next {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 50%;
+}
+.main-slider .owl-prev {
+    left: -10px;
+}
+.main-slider .owl-next {
+    right: -10px;
+}
+.main-slider .owl-prev i,
+.main-slider .owl-next i {
+    font-size: 35px;
 }
