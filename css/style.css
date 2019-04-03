@@ -382,7 +382,8 @@ body {
 
 .main-slider {
     margin: 0 auto 40px;
-    width: 1349px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .main-slider .owl-controls {
@@ -472,7 +473,8 @@ body {
 
 .title-news-sale {
     border-bottom: 2px solid #dcdcdc;
-    font-size: 16px
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .title-news-sale a {
@@ -713,7 +715,7 @@ body {
 
 .footer-left .hi-items {
     margin: 0 auto;
-    padding: 7px 0 0
+    padding: 10px;
 }
 
 .alias-footer,.footer-left .hi-items ul {
@@ -6629,6 +6631,10 @@ tr.no-border td {
     height: 40px;
     background: rgba(255, 255, 255, 0.8) !important;
     border-radius: 50%;
+}
+.main-slider .owl-prev:focus,
+.main-slider .owl-next:focus {
+    outline: none
 }
 .main-slider .owl-prev {
     left: -10px;
