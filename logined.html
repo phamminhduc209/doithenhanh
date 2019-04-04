@@ -11,12 +11,31 @@
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="libs/OwlCarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="js/jquery.mmenu.min.all.js">
+    <link rel="stylesheet" href="css/jquery.mmenu.all.css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-    
+    <nav id="nuser" class="mm-menu mm-horizontal mm-offcanvas mm-right mm-front mm-current mm-opened">
+        <ul class="list-unstyled alias-menu-account mm-list mm-panel mm-opened mm-current" id="mm-3">
+            <li>
+                <a href="#nuser" class="infomation-user">
+                    <div class="hi-thumb">
+                        <img src="img/avatar-default.png" alt="avatar">
+                    </div>
+                    <p class="ng-binding"><span class="number-account ng-binding">Khá Bảnh</span><br>0 đ</p>
+                </a>
+            </li>
+            <li><a href="#/profile.html" ui-sref="profile"><i class="fa fa fa-th-large"></i>Tài khoản</a></li>
+            <li><a href="#/change-password.html" ui-sref="changePassword"><i class="fa fa-lock"></i>Đổi mật khẩu</a></li>
+            <li><a href="#/change-password2.html" ui-sref="changePassword2"><i class="fa fa-key"></i>Mật khẩu cấp 2</a></li>
+            <li><a href="#/bank.html" ui-sref="bank"><i class="fa fa fa-credit-card"></i>Ngân hàng</a></li>
+            <li><a href="#/log-balance.html" ui-sref="logBalance"><i class="fa fa-history"></i>Biến động số dư</a></li>
+            <li><a href="#/history.html" ui-sref="history"><i class="fa fa fa-clock-o"></i>Báo cáo</a></li>
+            <li><a href="#/api-setup.html" ui-sref="api-setup"><i class="fa fa fa-cogs"></i>Kết nối API</a></li>
+            <li><a href="#/logout.html" ui-sref="logout"><i class="fa fa fa-sign-out"></i>Thoát</a></li>
+        </ul>
+    </nav>
     <div class="mm-page">
         <div class="topmenu">
             <div class="menu clearfix">
@@ -26,7 +45,7 @@
                         <img style="height: 34px; padding-top: 12px;" src="img/logo-web.png">
                     </a>
                 </div>
-                <div id="login-menu" class="">
+                <div id="login-menu" style="display: none;">
                     <div class="login">
                         <a href="#nlogin"><i class="fa fa-user"></i></a>
                         <ul class="list-inline">
@@ -35,16 +54,16 @@
                         </ul>
                     </div>
                 </div>
-                <div id="user-menu" style="display: none;" class="">
+                <div id="user-menu" style="" class="">
                     <a href="#nuser" class="account-items">
                         <div class="account">
                             <div class="hi-thumb">
                                 <img src="img/avatar-default.png" alt="avatar">
                             </div>
-                            <p class="ng-binding"><span class="number-account ng-binding"></span><br>false đ</p>
-                            <i class="fa fa-chevron-down"></i>
+                            <p class="ng-binding"><span class="number-account ng-binding">Khá Bảnh</span><br>0 đ</p><i class="fa fa-chevron-down"></i>
                         </div>
                     </a>
+                    
                 </div>
                 <div class="mdland-navigator">
                     <div class="menu-navigator clearfix">
@@ -235,67 +254,37 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="sellModal" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header no-padding">
-                    <div class="table-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="white">×</span></button>
-                        <i class="fa fa-exclamation-triangle text-warning" aria-hidden="true"></i> Cài đặt bảo mật:
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                Bạn hãy thiết lập mật khẩu cấp 2 để sử dụng cho các giao dịch thanh toán!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <div class="col-sm-12 text-right">
-                                <button type="submit" class="btn btn-sm btn-primary" ng-click="setPassword2()"><i class="fa fa-check" aria-hidden="true"></i> Đồng ý
-                                </button>
-                                <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Hủy
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
     <!-- js components -->
     <script src="js/jquery.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="libs/OwlCarousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.mmenu.min.all.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/app.min.js"></script>
+    <!-- <script src="js/app.min.js"></script> -->
+    <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script>
-        $('nav#menu').mmenu();
-        $('nav#nlogin').mmenu({
-            offCanvas: {
-                position: "right",
-                zposition: "front"
-            }
-        }, {
-            offCanvas: {
-                pageNodeType: "form"
-            }
-        });
-        $('nav#nuser').mmenu({
-            offCanvas: {
-                position: "right",
-                zposition: "front"
-            }
-        }, {
-            offCanvas: {
-                pageNodeType: "form"
-            }
+    $('nav#menu').mmenu();
+    $('nav#nlogin').mmenu({
+        offCanvas: {
+            position: "right",
+            zposition: "front"
+        }
+    }, {
+        offCanvas: {
+            pageNodeType: "form"
+        }
     });
-    </script>
+    $('nav#nuser').mmenu({
+        offCanvas: {
+            position: "right",
+            zposition: "front"
+        }
+    }, {
+        offCanvas: {
+            pageNodeType: "form"
+        }
+    });
+</script>
+        
 </body>
 </html>
