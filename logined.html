@@ -36,6 +36,37 @@
             <li><a href="#/logout.html" ui-sref="logout"><i class="fa fa fa-sign-out"></i>Thoát</a></li>
         </ul>
     </nav>
+    <nav class="mm-menu mm-horizontal mm-offcanvas" id="menu">
+        <ul class="mm-list mm-panel mm-opened mm-current" id="mm-0">
+            <li>
+                <a href="#/home.html" ui-sref="home">Trang chủ</a>
+            </li>
+            <li>
+                <a href="#/charge.html" ui-sref="charge">Nạp tiền</a>
+            </li>
+            <li>
+                <a href="#/transfer.html" ui-sref="transfer">Chuyển tiền</a>
+            </li>
+            <li>
+                <a href="#/payment.html" ui-sref="payment">Rút tiền</a>
+            </li>
+            <li>
+                <a class="mm-subopen" href="#mm-1"></a><a href="javascript:void(0);">Dịch vụ</a>
+            </li>
+            <li>
+                <a href="#/softpin-game.html" ui-sref="softpin-game">Mua thẻ Carot</a>
+            </li>
+            <li>
+                <a href="#/fee.html" ui-sref="fee">Bảng giá</a>
+            </li>
+        </ul>
+        <ul class="list-unstyled alias-menu mm-list mm-panel mm-hidden" id="mm-1">
+            <li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Dịch vụ</a></li>
+            <li><a href="#/topup.html" ui-sref="topup">Nạp tiền điện thoại</a></li>
+            <li><a href="#/softpin-mobile.html" ui-sref="softpin-mobile">Mua thẻ điện thoại</a></li>
+            <li><a href="#/softpin-game.html" ui-sref="softpin-game">Mua thẻ Game</a></li>
+        </ul>
+    </nav>
     <div class="mm-page">
         <div class="topmenu">
             <div class="menu clearfix">
@@ -263,28 +294,27 @@
     <!-- <script src="js/app.min.js"></script> -->
     <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script>
-    $('nav#menu').mmenu();
-    $('nav#nlogin').mmenu({
-        offCanvas: {
-            position: "right",
-            zposition: "front"
-        }
-    }, {
-        offCanvas: {
-            pageNodeType: "form"
-        }
-    });
-    $('nav#nuser').mmenu({
-        offCanvas: {
-            position: "right",
-            zposition: "front"
-        }
-    }, {
-        offCanvas: {
-            pageNodeType: "form"
-        }
-    });
-</script>
-        
+        $('nav#menu').mmenu();
+        $('nav#nlogin').mmenu({
+            offCanvas: {
+                position: "right",
+                zposition: "front"
+            }
+        }, {
+            offCanvas: {
+                pageNodeType: "form"
+            }
+        });
+        $('nav#nuser').mmenu({
+            offCanvas: {
+                position: "right",
+                zposition: "front"
+            }
+        }, {
+            offCanvas: {
+                pageNodeType: "form"
+            }
+        });
+    </script>
 </body>
 </html>

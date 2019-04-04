@@ -4812,7 +4812,11 @@ span.discount {
     }
 
     .mm-list>li>a,.mm-list>li>span {
-        color: #5e5e5e
+        color: #5e5e5e;
+    }
+
+    .mm-menu>.mm-list li:first-child>span {
+        color: #FFF;
     }
 
     .mm-list>li:hover>a,.mm-list>li:hover>span {
@@ -4928,8 +4932,8 @@ span.discount {
         float: right;
         padding-top: 0;
         position: absolute;
-        right: 0;
-        top: 0
+        right: 5px;
+        top: 8px;
     }
 
     .menu .login:hover a {
@@ -4947,7 +4951,7 @@ span.discount {
     }
 
     .m-expand {
-        margin: 10px 0 0
+        margin: 10px;
     }
 
     .account {
@@ -6645,4 +6649,27 @@ tr.no-border td {
 .main-slider .owl-prev i,
 .main-slider .owl-next i {
     font-size: 35px;
+}
+.main-slider .owl-dots {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    left: 0;
+    text-align: center;
+}
+.main-slider .owl-dots .owl-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/b05.png) no-repeat;
+    background-position: -7px -7px;
+    overflow: hidden;
+    cursor: pointer;
+    text-indent: -9999999px;
+}
+.main-slider .owl-dots .owl-dot.active {
+    background-position: -67px -7px;
+}
+.main-slider .owl-dots .owl-dot:hover {
+    background-position: -37px -7px;
 }
