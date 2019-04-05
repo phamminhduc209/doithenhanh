@@ -1,198 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content=""/>
-    <title>Tranfer</title>
-
+    <title>Index - doithenhanh</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!-- css -->
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="libs/OwlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/jasny-bootstrap/jasny-bootstrap.min.css">
+    <link rel="stylesheet" href="libs/datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="libs/jquery-mmenu/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="libs/bootstrap3-dialog/bootstrap-dialog.min.css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-
-</head>
-<body>
-    
+  </head>
+  <body>
+    <nav class="mm-menu mm-horizontal mm-offcanvas mm-right mm-front" id="nuser">
+      <ul class="list-unstyled alias-menu-account mm-list mm-panel mm-opened mm-current" id="mm-3">
+        <li>
+          <a href="#nuser" class="infomation-user">
+            <div class="hi-thumb">
+              <img src="img/avatar-default.png" alt="avatar">
+            </div>
+            <p><span class="number-account">Khá Bảnh</span><br>0 đ</p>
+          </a>
+        </li>
+        <li><a href="profile.html"><i class="fa fa fa-th-large"></i>Tài khoản</a></li>
+        <li><a href="change-password.html"><i class="fa fa-lock"></i>Đổi mật khẩu</a></li>
+        <li><a href="change-password2.html"><i class="fa fa-key"></i>Mật khẩu cấp 2</a></li>
+        <li><a href="bank.html"><i class="fa fa fa-credit-card"></i>Ngân hàng</a></li>
+        <li><a href="log-balance.html"><i class="fa fa-history"></i>Biến động số dư</a></li>
+        <li><a href="history.html"><i class="fa fa fa-clock-o"></i>Báo cáo</a></li>
+        <li><a href="api-setup.html"><i class="fa fa fa-cogs"></i>Kết nối API</a></li>
+        <li><a href="logout.html"><i class="fa fa fa-sign-out"></i>Thoát</a></li>
+      </ul>
+    </nav>
+    <nav class="mm-menu mm-horizontal mm-offcanvas mm-right mm-front" id="nlogin">
+      <ul class="mm-list mm-panel mm-opened mm-current" id="mm-2">
+        <li>
+          <span><i class="fa fa-user"></i> Xin chào</span>
+        </li>
+        <li>
+          <a href="login.html">Đăng nhập</a>
+        </li>
+        <li>
+          <a href="register.html">Đăng ký tài khoản</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="mm-menu mm-horizontal mm-offcanvas" id="menu">
+      <ul class="mm-list mm-panel mm-opened mm-current" id="mm-0">
+        <li>
+          <a href="">Trang chủ</a>
+        </li>
+        <li>
+          <a href="charge.html">Nạp tiền</a>
+        </li>
+        <li>
+          <a href="transfer.html">Chuyển tiền</a>
+        </li>
+        <li>
+          <a href="payment.html">Rút tiền</a>
+        </li>
+        <li>
+          <a class="mm-subopen" href="#mm-1"></a><a href="javascript:void(0);">Dịch vụ</a>
+        </li>
+        <li>
+          <a href="softpin-game.html">Mua thẻ Carot</a>
+        </li>
+        <li>
+          <a href="fee.html">Bảng giá</a>
+        </li>
+      </ul>
+      <ul class="list-unstyled alias-menu mm-list mm-panel mm-hidden" id="mm-1">
+        <li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Dịch vụ</a></li>
+        <li><a href="topup.html">Nạp tiền điện thoại</a></li>
+        <li><a href="softpin-mobile.html">Mua thẻ điện thoại</a></li>
+        <li><a href="softpin-game.html">Mua thẻ Game</a></li>
+      </ul>
+    </nav>
     <div class="mm-page">
-        <div class="topmenu">
-            <div class="menu clearfix">
-                <a href="#menu" class="m-expand"></a>
-                <div class="logo">
-                    <a class="logo-desktop" href="index.html" ui-sref="home">
-                        <img style="height: 34px; padding-top: 12px;" src="img/logo-web.png">
-                    </a>
-                </div>
-                <div id="login-menu" class="">
-                    <div class="login">
-                        <a href="#nlogin"><i class="fa fa-user"></i></a>
-                        <ul class="list-inline">
-                            <li><a href="register.html" ui-sref="register">Đăng ký</a></li>
-                            <li><a href="login.html" ui-sref="login">Đăng nhập</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="user-menu" style="display: none;" class="">
-                    <a href="#nuser" class="account-items">
-                        <div class="account">
-                            <div class="hi-thumb">
-                                <img src="img/avatar-default.png" alt="avatar">
-                            </div>
-                            <p class="ng-binding"><span class="number-account ng-binding"></span><br>false đ</p>
-                            <i class="fa fa-chevron-down"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="mdland-navigator">
-                    <div class="menu-navigator clearfix">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a class="mn-desktop" href="home.html" ui-sref="home">Trang chủ</a>
-                            </li>
-                            <li>
-                                <a class="mn-desktop" href="charge.html" ui-sref="charge">Nạp tiền</a>
-                            </li>
-                            <li>
-                                <a class="mn-desktop" href="transfer.html" ui-sref="transfer">Chuyển tiền</a>
-                            </li>
-                            <li>
-                                <a class="mn-desktop" href="payment.html" ui-sref="payment">Rút tiền</a>
-                            </li>
-                            <li>
-                                <a class="mn-desktop" href="javascript:void(0);">Dịch vụ <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-right"></i></a>
-                                <ul class="list-unstyled alias-menu">
-                                    <li><a href="topup.html" ui-sref="topup">Nạp tiền điện thoại</a></li>
-                                    <li><a href="softpin-mobile.html" ui-sref="softpin-mobile">Mua thẻ điện thoại</a></li>
-                                    <li><a href="softpin-game.html" ui-sref="softpin-game">Mua thẻ Game</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="mn-desktop" href="softpin-game.html" ui-sref="softpin-game">Mua thẻ Carot</a>
-                            </li>
-                            <li>
-                                <a class="mn-desktop" href="fee.html" ui-sref="fee">Bảng giá</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /mdland-navigator -->
+      <div class="topmenu">
+        <div class="menu clearfix">
+          <a href="#menu" class="m-expand"></a>
+          <div class="logo">
+            <a class="logo-desktop" href="index.html">
+            <img style="height: 34px; padding-top: 12px;" src="img/logo-web.png">
+            </a>
+          </div>
+          <div id="login-menu" style="display: none;">
+            <div class="login">
+              <a href="#nlogin"><i class="fa fa-user"></i></a>
+              <ul class="list-inline">
+                <li><a href="register.html">Đăng ký</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="container content clearfix">
-            <div class="form-group content-margin">
-                <h4>Chuyển tiền trong hệ thống</h4>
-                <p>Vui lòng nhập email nhận &amp; số tiền muốn chuyển:</p>
-            </div>
-            <div class="row">
-                <div class="form-horizontal col-sm-8 content-margin">
-                    <div class="alert alert-warning">- Phí chuyển số dư: 0đ.<br>- Số tiền chuyển phải &gt; 10,000đ.</div>
-                    <form action="" method="">
-                        <div class="form-group">
-                            <label class="control-label col-sm-4">Email hoặc SĐT nhận:</label>
-                            <div class="col-sm-8">
-                                <input type="text" name="email" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-4">Số tiền:</label>
-                            <div class="col-sm-8">
-                                <input type="number" name="amount" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-8">
-                                <button id="buyCardButton" type="submit" class="btn login-button">
-                                    <i class="fa fa-arrow-right"></i> Chuyển tiền
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+          </div>
+          <div id="user-menu"  >
+            <a href="#nuser" class="account-items">
+              <div class="account">
+                <div class="hi-thumb">
+                  <img src="img/avatar-default.png" alt="avatar">
                 </div>
+                <p><span class="number-account">Khá Bảnh</span><br>0 đ</p>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </a>
+          </div>
+          <div class="mdland-navigator">
+            <div class="menu-navigator clearfix">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a class="mn-desktop" href="">Trang chủ</a>
+                </li>
+                <li>
+                  <a class="mn-desktop" href="charge.html">Nạp tiền</a>
+                </li>
+                <li>
+                  <a class="mn-desktop" href="transfer.html">Chuyển tiền</a>
+                </li>
+                <li>
+                  <a class="mn-desktop" href="payment.html">Rút tiền</a>
+                </li>
+                <li>
+                  <a class="mn-desktop" href="javascript:void(0);">Dịch vụ <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-right"></i></a>
+                  <ul class="list-unstyled alias-menu">
+                    <li><a href="topup.html">Nạp tiền điện thoại</a></li>
+                    <li><a href="softpin-mobile.html">Mua thẻ điện thoại</a></li>
+                    <li><a href="softpin-game.html">Mua thẻ Game</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="mn-desktop" href="softpin-game.html">Mua thẻ Carot</a>
+                </li>
+                <li>
+                  <a class="mn-desktop" href="fee.html">Bảng giá</a>
+                </li>
+              </ul>
             </div>
+          </div>
+          <!-- /mdland-navigator -->
         </div>
-        <div class="payment clearfix hidden-xs">
+      </div>
+      <div class="container content clearfix">
+        <div class="form-group content-margin">
+          <h4>Chuyển tiền trong hệ thống</h4>
+          <p>Vui lòng nhập email nhận &amp; số tiền muốn chuyển:</p>
         </div>
-        <div class="footer clearfix">
-            <div class="info-footer clearfix">
-                <div class="footer-left clearfix">
-                    <ul class="list-inline">
-                        <li>
-                            <div class="hi-items">
-                                <p class="title">
-                                    <strong>Tài khoản</strong><i class="fa fa-minus"></i>
-                                </p>
-                                <ul class="alias-footer" style="display: block;">
-                                    <li><a href="#/register.html" ui-sref="register">Đăng ký</a></li>
-                                    <li><a href="#/login.html" ui-sref="login">Đăng nhập</a></li>
-                                    <li><a href="#/charge.html" ui-sref="charge">Nạp tiền</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hi-items">
-                                <p class="title">
-                                    <strong>Dịch vụ</strong><i class="fa fa-minus"></i>
-                                </p>
-                                <ul class="alias-footer" style="display: block;">
-                                    <li><a href="#/softpin-game.html" ui-sref="softpin-game">Mua thẻ carot</a></li>
-                                    <li><a href="#/softpin-mobile.html" ui-sref="softpin-mobile">Mua thẻ điện thoại</a></li>
-                                    <li><a href="#/softpin-game.html" ui-sref="softpin-game">Mua thẻ game</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hi-items">
-                                <p class="title">
-                                    <strong>Tiện ích</strong><i class="fa fa-minus"></i>
-                                </p>
-                                <ul class="alias-footer" style="display: block;">
-                                    <li><a href="#/transfer.html" ui-sref="transfer">Chuyển tiền</a></li>
-                                    <li><a href="#/payment.html" ui-sref="payment">Rút tiền</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="hi-items">
-                                <p class="title"><strong>Hỗ trợ trực tuyến</strong></p>
-                                <ul class="list-unstyled  alias-items">
-                                    <li>
-                                        <i class="fa fa-phone-square"></i>
-                                        <p class="nummber"><span>096.998.9504<span class="text-support"> (08h - 22h trừ T7&amp;CN)</span></span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-envelope-o"></i>
-                                        <p><a href="javascript:void(0);" class="nummber"> doithenhanh@gmail.com </a></p>
-                                        <p class="text-support"><span>Liên hệ qua Email</span></p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+        <div class="row">
+          <div class="form-horizontal col-sm-8 content-margin">
+            <div class="alert alert-warning">- Phí chuyển số dư: 0đ.<br>- Số tiền chuyển phải &gt; 10,000đ.</div>
+            <form action="" method="">
+              <div class="form-group">
+                <label class="control-label col-sm-4">Email hoặc SĐT nhận:</label>
+                <div class="col-sm-8">
+                  <input type="text" name="email" class="form-control">
                 </div>
-                <!--end .footer-left -->
-            </div>
-        </div>
-        <div class="bottom-footer clearfix">
-            <div class="info-bottom-footer clearfix">
-                <div class="menu-bottom-footer">
-                    <ul class="list-inline">
-                        <li><a href="index.html" ui-sref="home">Trang chủ</a></li>
-                        <li><a href="#/fee.html" ui-sref="fee">Bảng giá</a></li>
-                        <li><a href="javascript:void(0);">Hướng dẫn</a></li>
-                        <li><a href="javascript:void(0);">Điều khoản sử dụng</a></li>
-                    </ul>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-4">Số tiền:</label>
+                <div class="col-sm-8">
+                  <input type="number" name="amount" class="form-control">
                 </div>
-            </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-8">
+                  <button id="buyCardButton" type="submit" class="btn login-button">
+                  <i class="fa fa-arrow-right"></i> Chuyển tiền
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
+      <div class="payment clearfix hidden-xs">
+      </div>
+      <div class="footer clearfix">
+        <div class="info-footer clearfix">
+          <div class="footer-left clearfix">
+            <ul class="list-inline">
+              <li>
+                <div class="hi-items">
+                  <p class="title">
+                    <strong>Tài khoản</strong><i class="fa fa-minus"></i>
+                  </p>
+                  <ul class="alias-footer">
+                    <li><a href="register.html">Đăng ký</a></li>
+                    <li><a href="login.html">Đăng nhập</a></li>
+                    <li><a href="charge.html">Nạp tiền</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="hi-items">
+                  <p class="title">
+                    <strong>Dịch vụ</strong><i class="fa fa-minus"></i>
+                  </p>
+                  <ul class="alias-footer">
+                    <li><a href="softpin-game.html">Mua thẻ carot</a></li>
+                    <li><a href="softpin-mobile.html">Mua thẻ điện thoại</a></li>
+                    <li><a href="softpin-game.html">Mua thẻ game</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="hi-items">
+                  <p class="title">
+                    <strong>Tiện ích</strong><i class="fa fa-minus"></i>
+                  </p>
+                  <ul class="alias-footer">
+                    <li><a href="transfer.html">Chuyển tiền</a></li>
+                    <li><a href="payment.html">Rút tiền</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="hi-items">
+                  <p class="title"><strong>Hỗ trợ trực tuyến</strong></p>
+                  <ul class="list-unstyled  alias-items">
+                    <li>
+                      <i class="fa fa-phone-square"></i>
+                      <p class="nummber"><span>096.998.9504<span class="text-support"> (08h - 22h trừ T7&amp;CN)</span></span>
+                      </p>
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope-o"></i>
+                      <p><a href="javascript:void(0);" class="nummber"> doithenhanh@gmail.com </a></p>
+                      <p class="text-support"><span>Liên hệ qua Email</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--end .footer-left -->
+        </div>
+      </div>
+      <div class="bottom-footer clearfix">
+        <div class="info-bottom-footer clearfix">
+          <div class="menu-bottom-footer">
+            <ul class="list-inline">
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="fee.html">Bảng giá</a></li>
+              <li><a href="javascript:void(0);">Hướng dẫn</a></li>
+              <li><a href="javascript:void(0);">Điều khoản sử dụng</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    
     <!-- js components -->
     <script src="js/jquery.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="libs/OwlCarousel/owl.carousel.min.js"></script>
+    <script src="libs/owl/owl.carousel.min.js"></script>
+    <script src="libs/jasny-bootstrap/jasny-bootstrap.min.js"></script>
+    <script src="libs/moment/moment.min.js"></script>
+    <script src="libs/bootstrap3-dialog/bootstrap-dialog.min.js"></script>
+    <script src="libs/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="libs/jquery-mmenu/jquery.mmenu.min.all.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

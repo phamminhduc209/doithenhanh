@@ -715,7 +715,7 @@ body {
 
 .footer-left .hi-items {
     margin: 0 auto;
-    padding: 10px;
+    padding: 15px;
 }
 
 .alias-footer,.footer-left .hi-items ul {
@@ -767,7 +767,7 @@ body {
 
 .info-bottom-footer {
     margin: 0 auto;
-    padding: 5px 0;
+    padding: 15px 0;
     width: 1000px
 }
 
@@ -800,10 +800,7 @@ body {
     margin-left: 0
 }
 
-.menu-bottom-footer {
-    padding-left: 0;
-    padding-top: 10px
-}
+.menu-bottom-footer {}
 
 .menu-bottom-footer .list-inline {
     margin: 0
@@ -4881,7 +4878,7 @@ span.discount {
     }
 
     .footer-left .hi-items {
-        padding: 20px 0 0
+        padding: 15px 0;
     }
 
     .footer-left .hi-items .title {
@@ -4940,7 +4937,7 @@ span.discount {
         text-decoration: none
     }
 
-    .account .account-items p,.alias-footer,.menu .account p,.menu .menu-navigator {
+    .account .account-items p,.menu .account p,.menu .menu-navigator {
         display: none
     }
 
@@ -5027,6 +5024,10 @@ span.discount {
         float: left
     }
 
+    .info-bottom-footer {
+        padding: 10px 0;
+    }
+
     .menu-bottom-footer ul li a {
         font-size: 9px
     }
@@ -5046,8 +5047,7 @@ span.discount {
     }
 
     .info-bottom-footer .menu-bottom-footer {
-        padding: 15px 0 0;
-        text-align: center
+        text-align: center;
     }
 
     .notification .fa-bell-o {
@@ -5243,6 +5243,9 @@ span.discount {
 
     .paymentracharge {
         width: 395px
+    }
+    .footer-left .hi-items .alias-items li {
+        width: 100%;
     }
 }
 

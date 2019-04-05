@@ -149,34 +149,91 @@
       </div>
       <div class="container content clearfix">
         <div class="form-group content-margin">
-          <h4>Thông tin tài khoản</h4>
+          <h4>Biến động số dư</h4>
         </div>
         <div class="row">
-          <div class="form-horizontal col-sm-6 content-margin">
-            <form action="" method="">
-              <div class="form-group">
-                <label class="control-label col-sm-4">Họ và tên:</label>
-                <div class="col-sm-8"><input type="text" name="name" class="form-control" value="Khá Bảnh"></div>
+          <div class="form-horizontal col-sm-12 content-margin">
+            <form action="" method="" class="row">
+              <div class="form-horizontal col-sm-5">
+                <div class="form-group">
+                  <div class="col-sm-5">
+                    <select name="key" class="form-control">
+                      <option value="">Tất cả</option>
+                      <option value="id">Tham chiếu</option>
+                      <option value="provider">Loại thẻ</option>
+                      <option value="serial">serial</option>
+                      <option value="pin">pin</option>
+                      <option value="code">Mã code</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-2 hidden-xs" style="padding: 0px;margin-right: -47px; margin-top:7px"><i class="fa fa-forward"></i></div>
+                  <div class="col-sm-5"><input type="text" class="form-control" placeholder="Từ khóa" name="value"></div>
+                </div>
               </div>
-              <div class="form-group">
-                <label class="control-label col-sm-4">Địa chỉ Email:</label>
-                <div class="col-sm-8"><input type="email" name="email" class="form-control" value="khabanh1@gmail.com" disabled="disabled"></div>
+              <div class="form-horizontal col-sm-2">
+                <select name="status" class="form-control">
+                  <option value="100">Tất cả</option>
+                  <option value="0">Thành công</option>
+                  <option value="99">Đang xử lý</option>
+                  <option value="-1">Thất bại</option>
+                </select>
               </div>
-              <div class="form-group">
-                <label class="control-label col-sm-4">Số điện thoại:</label>
-                <div class="col-sm-8"><input type="tel" name="tel" class="form-control" value=""></div>
+              <div class="form-horizontal col-sm-4">
+                <div class="form-group">
+                  <div class="col-sm-5"><input type="text" class="form-control datepicker search-date" data-date-format="dd/mm/yyyy" readonly="readonly" name="fromDate"></div>
+                  <div class="col-sm-2 hidden-xs" style="padding: 0px;margin-right: -47px; margin-top:7px"><i class="fa fa-arrow-right"></i></div>
+                  <div class="col-sm-5"><input type="text" class="form-control datepicker search-date" data-date-format="dd/mm/yyyy" readonly="readonly" name="toDate"></div>
+                </div>
               </div>
-              <div class="form-group">
-                <label class="control-label col-sm-4">Bảo mật:</label>
-                <div class="col-sm-8"><label><input type="checkbox" checked="checked" disabled="disabled"> <span>Mật khẩu cấp 2</span></label><label class="pull-right"><input name="useOdp" type="checkbox"> <span>Xác thực qua ODP <i class="fa fa-question-circle" aria-hidden="true" title="Mã ODP sẽ được gửi về số điện thoại đăng ký, sử dụng trong vòng 24h."></i></span></label></div>
-              </div>
-              <div class="form-group"><label class="control-label col-sm-4">Số dư khả dụng:</label><label class="control-label col-sm-8"><strong class="pull-left text-danger ">0 <sup class="u-price">đ</sup></strong></label></div>
-              <div class="form-group">
-                <div class="col-sm-offset-4 col-sm-8"><button type="submit" class="btn btn-default">Cập nhật</button></div>
+              <div class="form-horizontal col-sm-1">
+                <div class="form-group">
+                  <div class="col-sm-12"><button type="submit" class="btn"><i class="fa fa-search"></i></button></div>
+                </div>
               </div>
             </form>
+            <table class="table table-hover media-list">
+              <thead>
+                <tr>
+                  <th>Thời gian</th>
+                  <th class="hidden-xs">Tham chiếu</th>
+                  <th style="width: 85px">Thẻ</th>
+                  <th>serial</th>
+                  <th>pin</th>
+                  <th>Mệnh giá</th>
+                  <th class="text-right">Thanh toán</th>
+                  <th class="text-right">Trạng thái</th>
+                </tr>
+              </thead>
+              <tfoot></tfoot>
+              <tbody>
+                <!-- ngRepeat: item in data | paginate: 10 -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="hidden-xs"></td>
+                  <td colspan="4" style="text-align: right">Tổng:</td>
+                  <td class="text-right " style="font-weight: bold">0</td>
+                  <td class="text-right " style="font-weight: bold">0</td>
+                  <td colspan="10"></td>
+                </tr>
+                <tr class="no-border">
+                  <td colspan="15" style="text-align: right">
+                    <paginator>
+                      <div class="pull-right">
+                        <ul class="pagination">
+                          <li class="disabled"><a href="javascript:void(0);" class="icon-white">Đầu</a></li>
+                          <li class="disabled"><a href="javascript:void(0);" class="icon-white"><i class="fa fa-angle-double-left"></i></a></li>
+                          <li><a href="javascript:void(0);"><i class="fa fa-angle-double-right"></i></a></li>
+                          <li><a href="javascript:void(0);">Cuối</a></li>
+                        </ul>
+                      </div>
+                    </paginator>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+            <div class="text-right hidden-xs"><button class="btn btn-light btn-sm"><i class="ace-icon fa fa-download bigger-160"></i> Export</button></div>
           </div>
-          <!-- ngIf: user.useOdp == 1 -->
         </div>
       </div>
       <div class="payment clearfix hidden-xs">

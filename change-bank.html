@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content=""/>
-    <title>Index - doithenhanh</title>
+    <title>Bank</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!-- css -->
@@ -149,34 +149,42 @@
       </div>
       <div class="container content clearfix">
         <div class="form-group content-margin">
-          <h4>Thông tin tài khoản</h4>
+          <h4>Thêm ngân hàng nhận tiền</h4>
         </div>
         <div class="row">
-          <div class="form-horizontal col-sm-6 content-margin">
-            <form action="" method="">
+          <div class="form-horizontal col-sm-8 content-margin">
+            <form class="ng-pristine ng-valid">
               <div class="form-group">
-                <label class="control-label col-sm-4">Họ và tên:</label>
-                <div class="col-sm-8"><input type="text" name="name" class="form-control" value="Khá Bảnh"></div>
+                <label class="control-label col-sm-4">Chọn ngân hàng:</label>
+                <div class="col-sm-8">
+                  <select name="bank" class="form-control">
+                    <option value="">--------- Chọn ngân hàng ---------</option>
+                    <option value="vcb">NH TMCP Ngoại Thương Việt Nam - Vietcombank</option>
+                    <option value="bidv">NH Đầu tư và Phát triển Việt Nam - BIDV</option>
+                    <option value="agribank">Ngân hàng NN &amp; PTNT VN - Agribank</option>
+                    <option value="dongabank">Ngân hàng Đông Á - DongAbank</option>
+                    <option value="msb">Ngân hàng Hàng Hải Việt Nam - Maritime Bank (MSB)</option>
+                    <option value="sacombank">Ngân hàng Sài Gòn Thương Tín - Sacombank</option>
+                    <option value="techcombank">Ngân hàng Kỹ thương Việt Nam - Techcombank</option>
+                    <option value="tpb">NH TMCP Tiên Phong - TPB</option>
+                    <option value="vietin">Ngân hàng Công Thương Việt Nam - Vietinbank</option>
+                    <option value="vpbank">Ngân hàng TMCP Việt Nam Thịnh Vượng - VPBank</option>
+                  </select>
+                </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-4">Địa chỉ Email:</label>
-                <div class="col-sm-8"><input type="email" name="email" class="form-control" value="khabanh1@gmail.com" disabled="disabled"></div>
+                <label class="control-label col-sm-4">Số tài khoản:</label>
+                <div class="col-sm-8"><input type="text" name="account" class="form-control ng-pristine ng-untouched ng-valid" ng-model="account"></div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-4">Số điện thoại:</label>
-                <div class="col-sm-8"><input type="tel" name="tel" class="form-control" value=""></div>
+                <label class="control-label col-sm-4">Tên tài khoản:</label>
+                <div class="col-sm-8"><input type="text" name="name" class="form-control ng-pristine ng-untouched ng-valid" ng-model="name"></div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-4">Bảo mật:</label>
-                <div class="col-sm-8"><label><input type="checkbox" checked="checked" disabled="disabled"> <span>Mật khẩu cấp 2</span></label><label class="pull-right"><input name="useOdp" type="checkbox"> <span>Xác thực qua ODP <i class="fa fa-question-circle" aria-hidden="true" title="Mã ODP sẽ được gửi về số điện thoại đăng ký, sử dụng trong vòng 24h."></i></span></label></div>
-              </div>
-              <div class="form-group"><label class="control-label col-sm-4">Số dư khả dụng:</label><label class="control-label col-sm-8"><strong class="pull-left text-danger ">0 <sup class="u-price">đ</sup></strong></label></div>
-              <div class="form-group">
-                <div class="col-sm-offset-4 col-sm-8"><button type="submit" class="btn btn-default">Cập nhật</button></div>
+                <div class="col-sm-offset-4 col-sm-8"><button type="submit" class="btn login-button" ng-click="add()"><i class="fa fa-arrow-right"></i> Thêm</button></div>
               </div>
             </form>
           </div>
-          <!-- ngIf: user.useOdp == 1 -->
         </div>
       </div>
       <div class="payment clearfix hidden-xs">
@@ -251,6 +259,40 @@
               <li><a href="javascript:void(0);">Hướng dẫn</a></li>
               <li><a href="javascript:void(0);">Điều khoản sử dụng</a></li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="sellModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header no-padding">
+            <div class="table-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span
+                class="white">×</span></button>
+              <i class="fa fa-exclamation-triangle text-warning" aria-hidden="true"></i> Cài đặt bảo mật:
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="form-horizontal">
+              <div class="form-group">
+                <div class="col-sm-12">
+                  Bạn hãy thiết lập mật khẩu cấp 2 để sử dụng cho các giao dịch thanh toán!
+                </div>
+              </div>
+            </div>
+            <div class="form-horizontal">
+              <div class="form-group">
+                <div class="col-sm-12 text-right">
+                  <button type="submit" class="btn btn-sm btn-primary" ng-click="setPassword2()"><i
+                    class="fa fa-check" aria-hidden="true"></i> Đồng ý
+                  </button>
+                  <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal"><i
+                    class="fa fa-times" aria-hidden="true"></i> Hủy
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
