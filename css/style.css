@@ -685,7 +685,8 @@ body {
 }
 
 .footer {
-    background: #797979
+    background: #797979;
+    margin-top: 15px;
 }
 
 .info-footer {
@@ -803,7 +804,8 @@ body {
 .menu-bottom-footer {}
 
 .menu-bottom-footer .list-inline {
-    margin: 0
+    margin: 0 auto;
+    text-align: center;
 }
 
 .address,.company {
