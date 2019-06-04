@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext,vietnamese');
+
 .header,.menu .logo,.topmenu {
     position: relative
 }
 
-.address,.company,.footer-left strong,.text-support,.user ul li p,body,span {
+/* .address,.company,.footer-left strong,.text-support,.user ul li p,body,span {
     font-family: Arial,sans-serif
-}
+} */
 
 .alias-notification li a,.balance-right .btn-link:hover,.info-history .table>tbody>tr>td:hover a,.menu .account .alias-menu-account li:hover a,.news-sale ul li:hover a,.payment ul li a:hover,.popup-login ul li a,.title-news-sale a:hover {
     text-decoration: none
@@ -64,7 +66,8 @@
 
 body {
     background: #fff;
-    font-size: 13px
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .line-green {
